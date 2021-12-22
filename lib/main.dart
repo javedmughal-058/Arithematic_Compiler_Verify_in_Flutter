@@ -30,7 +30,15 @@ class _State extends State<MyApp> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+                      CircleAvatar(
+                        radius: 55,
+                        backgroundColor: Color(0xffFDCF09),
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage('images/image.png'),
+                        ),
+                      ),
+                      SizedBox(height: 25,),
                       Text('Arithematic Operator Verify',style: TextStyle(
                         color:  hexToColor("#F2A03D"),
                         fontSize: 20,
