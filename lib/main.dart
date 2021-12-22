@@ -1,3 +1,4 @@
+import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget{
@@ -73,7 +74,21 @@ class MyApp extends StatelessWidget{
                                         onPressed: () {
                                           value=textcontroller.text;
                                           if(value=='+' || value=='-' || value=='*' || value=='/' || value=='%'){
+                                            CoolAlert.show(
+                                              context: context,
+                                              type: CoolAlertType.success,
+                                              title: 'Successful',
+                                              text: "You entered Arithematic Operator $value",
+                                            );
+                                          }
+                                          else {
+                                            CoolAlert.show(
+                                              context: context,
+                                              type: CoolAlertType.error,
+                                              title: 'Error',
+                                              text: "invalid entry $value",
 
+                                            );
                                           }
                                         },
                                       ),
